@@ -24,7 +24,7 @@ pipeline {
         stage('Build') {
             steps {
                 dir('complete') {
-                    sh '/opt/maven/bin/mvn clean install'  // Build the project using Maven
+                    sh '/opt/maven clean install'  // Build the project using Maven
                 }
             }
         }
@@ -32,7 +32,7 @@ pipeline {
         stage('Test') {
             steps {
                 dir('complete') {
-                    sh '/opt/maven/bin/mvn test'  // Run tests
+                    sh '/opt/maven test'  // Run tests
                 }
             }
         }
